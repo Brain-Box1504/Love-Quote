@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    android:padding="12dp">
+
+    <!-- Top Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Font"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <!-- Quote Frame -->
+    <FrameLayout
+        android:id="@+id/quoteFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="12dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg1"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/quoteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:shadowColor="@color/yellow"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+    <!-- Background Selector -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/bgContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="6dp" />
+
+    </HorizontalScrollView>
+
+    <!-- Bottom Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp">
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnCopy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copy"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <!-- Swipe Indicators -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/prevQuote"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="6dp" />
+
+        <ImageView
+            android:id="@+id/nextQuote"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_media_next"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="6dp" />
+    </LinearLayout>
+
+</LinearLayout>
